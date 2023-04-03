@@ -22,7 +22,9 @@ export const Appa = () => {
     componentDidUpdate();
   };
   const handleCheckUnique = name => {
-    const isExistContact = !!contacts.find(contact => contact.name === name);
+    const isExistContact = !!contacts.find(
+      contact => contact.name.toLowerCase() === name.toLowerCase()
+    );
 
     isExistContact && alert(`${name} is already in contacts`);
 
